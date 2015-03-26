@@ -1302,6 +1302,9 @@ nvm() {
       ADDITIONAL_PARAMETERS=''
       local PROVIDED_REINSTALL_PACKAGES_FROM
       local REINSTALL_PACKAGES_FROM
+      
+      # Install system globals by default
+      REINSTALL_PACKAGES_FROM="$(nvm_version system)"
 
       while [ $# -ne 0 ]
       do
